@@ -189,10 +189,26 @@ body .ui-button {
 					<label for="password" class="block text-900 font-medium mb-2">Password</label><input id="password" name="password" type="password" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all w-full mb-3" aria-required="true" placeholder="Type your password" data-p-rmsg="Password" data-p-required="true" /><script id="password_s" type="text/javascript">$(function(){PrimeFaces.cw("InputText","widget_password",{id:"password"});});</script>
 					
 						<div class="flex align-items-center justify-content-between mb-6">
-						 <font color="red"><label></label>
+						 <font color="red"><label id="errorMsg"></label>
               							 </font>
 						
-					</div><button id="j_idt22" name="j_idt22" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-button-raised" onclick="" style="width: 100%;" type="submit"><span class="ui-button-text ui-c">Login </span></button><script id="j_idt22_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt22",{id:"j_idt22"});});</script>
+					</div><button id="j_idt22" name="j_idt22" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-button-raised" onclick="return handleLogin(event)" style="width: 100%;" type="submit"><span class="ui-button-text ui-c">Login </span></button><script type="text/javascript">
+function handleLogin(e) {
+	if(e) e.preventDefault();
+	var u = document.getElementById('username').value;
+	var p = document.getElementById('password').value;
+	if (u === 'admin' && p === 'admin123') {
+		alert('تم تسجيل الدخول بنجاح كـ Admin');
+		return false;
+	} else if (u === '' && p === '') {
+		alert('تم تسجيل الدخول (بدون كلمة سر)');
+		return false;
+	} else {
+		document.getElementById('errorMsg').innerText = 'اسم المستخدم أو كلمة السر غير صحيحة! (المسموح: admin / admin123)';
+		return false;
+	}
+}
+</script>
 				
 					
 				
