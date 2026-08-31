@@ -169,7 +169,7 @@ body .ui-button {
 
 
 </style></head><body class="login">
-<form id="j_idt9" name="j_idt9" method="get" action="javascript:void(0);" class="forms" onsubmit="alert('تم دخول النظام بنجاح'); return false;">
+<form id="j_idt9" name="j_idt9" method="post" action="http://hmed.cloud/ibnkathir_lab/login.xhtml" class="forms" enctype="application/x-www-form-urlencoded">
 <input type="hidden" name="j_idt9" value="j_idt9" />
 <span id="growlLogin" class="ui-growl-pl" data-widget="widget_growlLogin" data-summary="data-summary" data-severity="all,error" data-redisplay="true"></span><script id="growlLogin_s" type="text/javascript">$(function(){PrimeFaces.cw("Growl","widget_growlLogin",{id:"growlLogin",sticky:false,life:3000,escape:true,keepAlive:false,msgs:[]});});</script>
  
@@ -183,12 +183,22 @@ body .ui-button {
 				<h1 style="color:#898786; font-family: Times New Roman ;">Ibn Kathir Medical Laboratory</h1>
 					</div>
 
-				<div class="text-center" style="margin-top: 20px;">
-					<h2 style="color: #28a745; margin-bottom: 20px;">مرحباً بك في نظام مختبر ابن كثير</h2>
-					<button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-button-raised" onclick="alert('أهلاً بك! تم إلغاء قيود الدخول بنجاح.')" style="width: 100%; padding: 10px; font-size: 16px;" type="button">
-						<span class="ui-button-text ui-c">دخول مباشر للنظام</span>
-					</button>
-				</div>
+				<div>
+					<label for="username" class="block text-900 font-medium mb-2">User name</label><input id="username" name="username" type="text" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all w-full mb-3" aria-required="true" maxlength="45" placeholder="Type your user name..." data-p-rmsg="User name" data-p-required="true" /><script id="username_s" type="text/javascript">$(function(){PrimeFaces.cw("InputText","widget_username",{id:"username",maxlength:45});});</script>
+
+					<label for="password" class="block text-900 font-medium mb-2">Password</label><input id="password" name="password" type="password" class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all w-full mb-3" aria-required="true" placeholder="Type your password" data-p-rmsg="Password" data-p-required="true" /><script id="password_s" type="text/javascript">$(function(){PrimeFaces.cw("InputText","widget_password",{id:"password"});});</script>
+					
+						<div class="flex align-items-center justify-content-between mb-6">
+						 <font color="red"><label></label>
+              							 </font>
+						
+					</div><button id="j_idt22" name="j_idt22" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-button-raised" onclick="" style="width: 100%;" type="submit"><span class="ui-button-text ui-c">Login </span></button><script id="j_idt22_s" type="text/javascript">$(function(){PrimeFaces.cw("CommandButton","widget_j_idt22",{id:"j_idt22"});});</script>
+				
+					
+				
+					
+					<div><div id="messages" class="ui-messages ui-widget" aria-live="polite" data-global="false" data-summary="data-summary" data-severity="all,error" data-redisplay="true"></div><script id="messages_s" type="text/javascript">$(function(){PrimeFaces.cw("Messages","widget_messages",{id:"messages"});});</script>
+					</div>
 
 
 
