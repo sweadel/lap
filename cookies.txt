@@ -1,4 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-hmed.cloud	TRUE	/ibnkathir_lab	FALSE	1999999999	JSESSIONID	E5A983B3A16F4CB5899B967D6E2D438C
-
